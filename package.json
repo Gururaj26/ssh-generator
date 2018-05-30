@@ -6,5 +6,9 @@
   "repository": "https://gitlab.com/pixelbuster/ssh-generator",
   "author": "Gururaj Dharani",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "chalk-pipe": "^1.2.0",
+    "inquirer": "^5.2.0"
+  }
 }
