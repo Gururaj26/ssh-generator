@@ -1,0 +1,10 @@
+{
+  "name": "ssh-generator",
+  "version": "0.1",
+  "description": "Help you generate ssh keys, trust me you just need to answer some questions",
+  "main": "app.js",
+  "repository": "https://gitlab.com/pixelbuster/ssh-generator",
+  "author": "Gururaj Dharani",
+  "license": "MIT",
+  "private": true
+}
