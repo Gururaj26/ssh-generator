@@ -6,6 +6,9 @@ const questions = utils.questions;
 
 inquirer.prompt(questions).then(answers => {
   const command = 'ssh-keygen -t rsa -b 4096 -f ~/.ssh/' + answers.username + '-' + answers.domain + ' ' + '-C' + ' ' + '"' + answers.username + '-' + answers.domain + '"';
-  let cmd = execSync(command);
-  if(answers.isConfirm) console.log('Successfully created your ssh keys');
+  if(answers.isConfirm) {
+    execSync(command);
+    console.log('Successfully created your ssh keys');
+  }
+  else console.log('Paste this to create your ssh keys: ', command);
 });

@@ -25,7 +25,7 @@ var questions = [{
 }, {
   type: 'confirm',
   name: 'isConfirm',
-  message: 'Do you want to create your ssh key ? (y/N)',
+  message: 'Do you want to create your ssh key ?',
 }];
 
 module.exports = {
