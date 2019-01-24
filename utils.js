@@ -21,7 +21,11 @@ var questions = [{
 }, {
   type: 'input',
   name: 'username',
-  message: 'What is your username in the selected option above',
+  message: 'Your username :',
+}, {
+  type: 'confirm',
+  name: 'isConfirm',
+  message: 'Do you want to create your ssh key ?',
 }];
 
 module.exports = {
