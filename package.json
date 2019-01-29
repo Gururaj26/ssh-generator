@@ -1,6 +1,6 @@
 {
   "name": "ssh-generator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple tool to generate ssh keys with ease of CLI.",
   "main": "app.js",
   "repository": "https://gitlab.com/pixelbuster/ssh-generator",
