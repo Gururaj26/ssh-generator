@@ -1,5 +1,9 @@
 const inquirer = require('inquirer');
-const chalkPipe = require('chalk-pipe');
+
+function validateName(name){
+  const isValid = (name !== '');
+  return isValid || '~ Username is required';
+}
 
 var questions = [{
   type: 'list',
@@ -16,12 +20,18 @@ var questions = [{
     {
       name: 'Bitbucket',
       value: 'bitbucket.org'
+    },
+    new inquirer.Separator(),
+    {
+      name: 'Custom Domain',
+      value: 'custom_domain'
     }
   ]
 }, {
   type: 'input',
   name: 'username',
   message: 'Your username :',
+  validate: validateName
 }, {
   type: 'confirm',
   name: 'isConfirm',
