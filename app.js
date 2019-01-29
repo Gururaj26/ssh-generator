@@ -17,7 +17,7 @@ function generateKeys(username, domain, type){
   if(type=='print'){
     console.log('Paste this to create your ssh keys: ', exp);
   } else {
-    execSync(command);
+    execSync(exp);
   }
 }
 
