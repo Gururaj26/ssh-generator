@@ -19,6 +19,9 @@
     "joi": "^14.3.1",
     "rxjs": "^6.3.3"
   },
+  "scripts": {
+    "patch-release": "npm version patch && npm publish && git push --follow-tags"
+  },
   "bin": {
     "ssh-generator": "app.js"
   }
