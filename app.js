@@ -1,8 +1,10 @@
-const inquirer = require('inquirer');
-const chalkPipe = require('chalk-pipe');
-const execSync = require('child_process').execSync;
-const utils = require('./utils.js');
-const questions = utils.questions;
+#! /usr/bin/env node
+
+const inquirer = require('inquirer')
+const chalkPipe = require('chalk-pipe')
+const execSync = require('child_process').execSync
+const utils = require('./utils.js')
+const questions = utils.questions
 
 function validateUrl(name){
   const exp = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
@@ -39,10 +41,8 @@ inquirer.prompt(questions).then(answers => {
   }
   if(answers.domain != 'custom_domain'){
     if (answers.isConfirm) {
-      console.log('-------2');
       generateKeys(answers.username, domain, 'generate');
     } else {
-      console.log('-------3');
       generateKeys(answers.username, domain, 'print');
     }
   }
