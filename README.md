@@ -1,4 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/ssh-generator.svg)](https://badge.fury.io/js/ssh-generator)
 
 # SSH Generator
 
@@ -32,7 +33,7 @@ As mentioned above it generally took at least 10-15mins for me to create those k
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
@@ -40,7 +41,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
 
 ## Acknowledgments
 
