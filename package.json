@@ -20,7 +20,7 @@
     "rxjs": "^6.3.3"
   },
   "scripts": {
-    "patch-release": "npm version patch && npm publish && git push --follow-tags"
+    "patch-release": "npm version patch && npm publish"
   },
   "bin": {
     "ssh-generator": "app.js"
