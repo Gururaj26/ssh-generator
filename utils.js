@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 const inquirer = require('inquirer')
 
 function validateName(name){

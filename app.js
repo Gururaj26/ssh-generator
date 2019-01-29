@@ -1,5 +1,4 @@
 #! /usr/bin/env node
-
 const inquirer = require('inquirer')
 const chalkPipe = require('chalk-pipe')
 const execSync = require('child_process').execSync

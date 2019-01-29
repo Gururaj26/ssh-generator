@@ -5,7 +5,12 @@
   "main": "app.js",
   "repository": "https://gitlab.com/pixelbuster/ssh-generator",
   "author": "Gururaj Dharani",
-  "keywords": ["ssh-generator", "ssh", "generator", "create ssh"],
+  "keywords": [
+    "ssh-generator",
+    "ssh",
+    "generator",
+    "create ssh"
+  ],
   "license": "MIT",
   "private": false,
   "dependencies": {
@@ -15,6 +20,6 @@
     "rxjs": "^6.3.3"
   },
   "bin": {
-  "ssh-generator": "app.js"
+    "ssh-generator": "app.js"
   }
 }
