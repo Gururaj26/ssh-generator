@@ -6,8 +6,6 @@
 
 Simple tool to generate ssh keys. Every time when i used to create ssh keys it generally took at least 10mins as a beginner. It will not take more than 2mins to create your ssh keys using this.
 
-<p align="center"><img src="/img/demo.gif?raw=true"/></p>
-
 Built to save 5mins of life 👌 !
 
 > If you think so, support me with a `star` and a `follow` 😘
