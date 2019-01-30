@@ -11,6 +11,10 @@ module.exports = {
     const isValid = name.match(regex);
     return (isValid ? true : false) || '~ Url is not valid'
   },
+  validateName: function(name){
+    const isValid = (name !== '');
+    return isValid || '~ Username is required';
+  },
   generateKeys: function(username, domain, type) {
     let exp = 'ssh-keygen -t rsa -b 4096 -f ~/.ssh/' + username + '-' + domain + ' ' + '-C' + ' ' + '"' + username + '-' + domain + '"';
     let printExp = `${'cat ~/.ssh/' + username + '-' + domain + '.pub'}`;
