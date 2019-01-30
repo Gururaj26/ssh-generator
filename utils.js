@@ -1,10 +1,6 @@
 #! /usr/bin/env node
 const inquirer = require('inquirer')
-
-function validateName(name){
-  const isValid = (name !== '');
-  return isValid || '~ Username is required';
-}
+const helpers = require('./helpers')
 
 var questions = [{
   type: 'list',
@@ -32,7 +28,7 @@ var questions = [{
   type: 'input',
   name: 'username',
   message: 'Your username :',
-  validate: validateName
+  validate: helpers.validateName
 }, {
   type: 'confirm',
   name: 'isConfirm',
