@@ -1,9 +1,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![npm version](https://badge.fury.io/js/ssh-generator.svg)](https://badge.fury.io/js/ssh-generator)
+[![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 # SSH Generator
 
 Simple tool to generate ssh keys. Every time when i used to create ssh keys it generally took at least 10mins as a beginner. It will not take more than 2mins to create your ssh keys using this.
+
+Built to save 5mins of life 👌 !
+
+> If you think so, support me with a `star` and a `follow` 😘
 
 ## Usage
 
@@ -13,7 +18,7 @@ With [npm](https://npmjs.org/) installed, run
 npm install -g ssh-generator
 ```
 
-### Create your ssh keys
+### Create your ssh keys with SSH Generator
 
 ```
 ssh-generator
