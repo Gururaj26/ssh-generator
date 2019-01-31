@@ -2,7 +2,9 @@ const chalkPipe = require('chalk-pipe')
 const constants = require('./constants.js')
 const seperator = constants.seperator
 const urlRegex = constants.urlRegex
-var exec = require('child_process').exec
+const thanksDecorator = constants.thanksDecorator
+const exec = require('child_process').exec
+const fs = require('fs');
 
 module.exports = {
   validateUrl: function(name) {
@@ -14,6 +16,21 @@ module.exports = {
   validateName: function(name){
     const isValid = (name !== '');
     return isValid || '~ Username is required';
+  },
+  updateConfig: function(){
+    const configPath = 'sample.txt';
+    // const configPath = '~/.ssh/config';
+    fs.open(configPath, "a+", function(error, fd) {
+      if (error) {
+        console.error("open error:  " + error.message);
+      } else {
+        fs.appendFile(configPath, '\r\ndata to append', function (err) {
+          if (err) throw err;
+          console.log(seperator + 'Saved SSH to config file !' + seperator + thanksDecorator);
+          process.exit(1);
+        });
+      }
+    });
   },
   generateKeys: function(username, domain, type) {
     let exp = 'ssh-keygen -t rsa -b 4096 -f ~/.ssh/' + username + '-' + domain + ' ' + '-C' + ' ' + '"' + username + '-' + domain + '"';
@@ -27,6 +44,7 @@ module.exports = {
         let subchild = exec(printExp);
         subchild.stdout.on('data', function(data) {
           console.log(seperator + 'Freshly baked key: Ready to be served !' + seperator, chalkPipe('orange')(data));
+          module.exports.updateConfig();
         });
         subchild.stderr.on('data', function(data) {
           console.log('stdout: ' + data);
