@@ -17,14 +17,18 @@ module.exports = {
     const isValid = (name !== '');
     return isValid || '~ Username is required';
   },
-  updateConfig: function(){
+  updateConfig: function(username, domain){
     const configPath = 'sample.txt';
     // const configPath = '~/.ssh/config';
+    const host = `${'Host '+ username + '-' + domain}`;
+    const hostName = `${'HostName '+ domain}`
+    const identityFile = `${'IdentityFile ~/.ssh/' + username + '-' + domain}`;
+    const config = `${'\r\n' + host + '\r\n' + '  ' + hostName + '\r\n' + '  ' + identityFile}`;
     fs.open(configPath, "a+", function(error, fd) {
       if (error) {
         console.error("open error:  " + error.message);
       } else {
-        fs.appendFile(configPath, '\r\ndata to append', function (err) {
+        fs.appendFile(configPath, config, function (err) {
           if (err) throw err;
           console.log(seperator + 'Saved SSH to config file !' + seperator + thanksDecorator);
           process.exit(1);
@@ -43,8 +47,8 @@ module.exports = {
         console.log('stdout: ' + data);
         let subchild = exec(printExp);
         subchild.stdout.on('data', function(data) {
-          console.log(seperator + 'Freshly baked key: Ready to be served !' + seperator, chalkPipe('orange')(data));
-          module.exports.updateConfig();
+          console.log(seperator + 'Freshly baked key: Ready to be served !' + seperator + chalkPipe('orange')(data));
+          module.exports.updateConfig(username, domain);
         });
         subchild.stderr.on('data', function(data) {
           console.log('stdout: ' + data);
