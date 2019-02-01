@@ -5,6 +5,8 @@ const urlRegex = constants.urlRegex
 const thanksDecorator = constants.thanksDecorator
 const exec = require('child_process').exec
 const fs = require('fs');
+var os = require('os');
+const path = require('path')
 
 module.exports = {
   validateUrl: function(name) {
@@ -18,8 +20,8 @@ module.exports = {
     return isValid || '~ Username is required';
   },
   updateConfig: function(username, domain){
-    const configPath = 'sample.txt';
-    // const configPath = '~/.ssh/config';
+    const currentUser = os.userInfo().username;
+    const configPath = `${ path.parse(process.cwd()).root + 'Users/' + currentUser + '/.ssh/config'}`;
     const host = `${'Host '+ username + '-' + domain}`;
     const hostName = `${'HostName '+ domain}`
     const identityFile = `${'IdentityFile ~/.ssh/' + username + '-' + domain}`;
@@ -28,7 +30,7 @@ module.exports = {
       if (error) {
         console.error("open error:  " + error.message);
       } else {
-        fs.appendFile(configPath, config, function (err) {
+        fs.appendFile(fd, config, function (err) {
           if (err) throw err;
           console.log(seperator + 'Saved SSH to config file !' + seperator + thanksDecorator);
           process.exit(1);
