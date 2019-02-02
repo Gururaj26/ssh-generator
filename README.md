@@ -38,6 +38,12 @@ As mentioned above it generally took at least 10-15mins for me to create those k
 * [Inquirer](https://github.com/SBoudrias/Inquirer.js) - Interactive CLI user interface.
 * [npm](https://www.npmjs.com/) - Package manager
 
+## Roadmap
+
+* List all the keys in local and specific service.
+* update keys to github, bitbucket and gitlab respectively with users authentication
+* -- Suggestions? DM me on twitter [Gururaj](https://twitter.com/Gururaj15)
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.MD) for details on our code of conduct, and the process for submitting pull requests to us.
