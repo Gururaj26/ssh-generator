@@ -17,9 +17,12 @@
     "chalk-pipe": "^2.0.0",
     "inquirer": "^6.2.1",
     "joi": "^14.3.1",
-    "rxjs": "^6.3.3"
+    "rxjs": "^6.3.3",
+    "lodash": "^4.17.19"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/@gururaj26" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@gururaj26"
+  },
   "scripts": {
     "patch-release": "npm version patch && npm publish"
   },
