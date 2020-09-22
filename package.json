@@ -19,7 +19,7 @@
     "joi": "^14.3.1",
     "rxjs": "^6.3.3"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/@gururaj26" },
   "scripts": {
     "patch-release": "npm version patch && npm publish"
   },
