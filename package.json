@@ -1,6 +1,6 @@
 {
   "name": "ssh-generator",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple tool to generate ssh keys with ease of CLI.",
   "main": "app.js",
   "repository": "https://github.com/Gururaj26/ssh-generator",
